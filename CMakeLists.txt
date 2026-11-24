@@ -15,6 +15,9 @@ add_executable(employee_manager  # 定义多文件版可执行目标并列出参
 target_include_directories(employee_manager PRIVATE include)
 # 为多文件目标添加 include 头文件搜索目录。
 
+add_executable(employee_sequential "顺序表.cpp")  # 第一题。
+add_executable(employee_linked "单链表.cpp")  # 第二题。
+
 option(BUILD_EMPLOYEE_MANAGER_SINGLE "Build the single-file employee manager" OFF)
 # 默认关闭单文件版，需要时可在 CMake 中启用。
 if(BUILD_EMPLOYEE_MANAGER_SINGLE)
